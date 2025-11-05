@@ -8,6 +8,8 @@
 
 #include <executorch/backends/vulkan/runtime/graph/containers/SharedObject.h>
 
+#include <algorithm>
+
 #include <executorch/backends/vulkan/runtime/graph/ComputeGraph.h>
 
 namespace vkcompute {
