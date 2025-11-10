@@ -119,7 +119,7 @@ list(APPEND vulkan_backend_cpp ${vulkan_graph_cpp})
 list(APPEND vulkan_backend_cpp ${vulkan_standard_shaders_cpp})
 list(APPEND vulkan_backend_cpp ${vulkan_runtime_utils_cpp})
 
-add_library(vulkan_backend ${vulkan_backend_cpp})
+add_library(vulkan_backend SHARED ${vulkan_backend_cpp})
 target_include_directories(
   vulkan_backend PRIVATE ${SCHEMA_INCLUDE_DIR} ${COMMON_INCLUDES}
 )

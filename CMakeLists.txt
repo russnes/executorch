@@ -883,7 +883,7 @@ if(EXECUTORCH_BUILD_PYBIND)
   )
   target_include_directories(portable_lib PRIVATE ${TORCH_INCLUDE_DIRS})
   target_compile_options(portable_lib PUBLIC ${_pybind_compile_options})
-  target_link_libraries(portable_lib PRIVATE ${_dep_libs})
+  target_link_libraries(portable_lib PRIVATE vulkan_backend ${_dep_libs})
 
   # Set RPATH to find PyTorch libraries relative to the installation location
   # This goes from executorch/extension/pybindings up to site-packages, then to
